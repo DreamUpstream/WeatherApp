@@ -1,4 +1,4 @@
-# A full-fledged Weather forecast web application
+# A full-fledged weather forecast web application
 A Weather forecast website for Lithuanian cities. Use any source as you wish.
 Features:
 - Weather forecasts search by using Meteo.lt API
