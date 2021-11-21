@@ -1,4 +1,4 @@
-# A full-fledged weather forecast web application
+# WeatherCast - a full-fledged weather forecast web application
 A Weather forecast website for Lithuanian cities built on Nodejs + Expressjs. Use any resource as you wish.
 # Features:
 - Weather forecasts search using Meteo.lt API
