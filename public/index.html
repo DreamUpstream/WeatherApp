@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/app.css" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/7e37945c7e.js" crossorigin="anonymous"></script>
+	<title>WeatherCast</title>
+	<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+<body>
+	<!-- HEADER -->
+	<header>
+		<div class="px-3 py-2 headerBackground textShadow text-white">
+		  <div class="container">
+			<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+			  <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+				<img src="./images/Logo.png" width="180" height="40" alt="">
+			  </a>
+			  <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+				<li>
+				  <a href="https://github.com/DreamUpstream" class="nav-link text-light headerIcons">
+					<i class="fas fa-cloud-moon-rain"></i>
+					By DreamUpstream
+				  </a>
+				</li>
+			  </ul>
+			</div>
+		  </div>
+		</div>
+		<div class="px-3 py-2 border-bottom mb-2 mt-3">
+		  <div class="container d-flex flex-wrap justify-content-center">
+			<h3>Find weather forecast by location:</h3>
+			<div class="container mt-2 mb-3">
+				<div class="card">
+					<div class="card-body">
+						<input type="text" class="form-control" placeholder="Enter place name" id="place">
+					</div>
+					<div class="list-group list-group-flush" id="place-suggestions"></div>
+			</div>
+		  </div>
+		</div>
+	  </header>
+	  <!-- HEADER -->
+	  <!-- MAIN -->
+	<main class="col-md-12 ms-sm-auto col-lg-12 px-md-4">
+  <!-- Weather Renderer -->
+		<div class="weatherRenderer goodWeather d-flex flex-wrap justify-content-center" id="mainForecast"> 
+			<div class="col-12 d-flex justify-content-center align-items-center">
+				<h1 class="text-white textShadow mt-4" id="WeatherCity">Weather in Vilnius <img src="./images/flag.png" class="flag"></h1>
+			</div>
+
+			<div class="col-12 flex-wrap d-flex justify-content-center align-items-center" id="cardFont">
+
+				<div class="col-12 col-md-5 d-flex justify-content-center mb-1">
+					<div class="card mb-1 col-10 col-lg-8 mgleft cardRadius border-dark text-center text-white special-card">    
+						<div class="card-body" id="day1">
+							<h3 class="card-title textShadow">Now</h3>
+							<p class="card-text"><i class="fas fa-temperature-low"></i> +5 °C </p>
+							<p class="card-text"><i class="fas fa-sun"></i> Isolated Clouds</p>
+							<p class="card-text"><i class="fas fa-wind"></i> 5 m/s</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-12 col-md-5 d-flex justify-content-center mb-1">
+					<div class="card mb-1 col-10 col-lg-8 mgright cardRadius border-dark text-center text-white special-card">    
+						<div class="card-body" id="day2">
+							<h3 class="card-title textShadow">Tomorrow </h3>
+							<p class="card-text"><i class="fas fa-temperature-low"></i> +5 °C </p>
+							<p class="card-text"><i class="fas fa-sun"></i> Clear</p>
+							<p class="card-text"><i class="fas fa-wind"></i> 5 m/s</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-12 col-md-5 d-flex justify-content-center mb-1">
+					<div class="card col-10 col-lg-8 cardRadius mgleft border-dark text-center text-white special-card">    
+						<div class="card-body" id="day3">
+							<h3 class="card-title textShadow">Server error</h3>
+							<p class="card-text"><i class="fas fa-temperature-low"></i> +5 °C </p>
+							<p class="card-text"><i class="fas fa-sun"></i> Clear</p>
+							<p class="card-text"><i class="fas fa-wind"></i> 5 m/s</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12 col-md-5 mb-1 d-flex justify-content-center">
+					<div class="card col-10 col-lg-8 cardRadius mb-1 mgright border-dark text-center text-white special-card">    
+						<div class="card-body" id="day4">
+							<h3 class="card-title textShadow">Server error</h3>
+							<p class="card-text"><i class="fas fa-temperature-low"></i> +5 °C </p>
+							<p class="card-text"><i class="fas fa-sun"></i> Clear</p>
+							<p class="card-text"><i class="fas fa-wind"></i> 5 m/s</p>
+						</div>
+					</div>
+				</div>
+			
+			</div>
+		</div>
+  <!-- Weather Renderer -->
+  <!-- Major Cities -->
+		<h2 class="mt-4 ms-3 mb-3">Major Lithuanian cities</h2>
+		<div class="table-responsive">
+		  <table class="table table-striped table-lg" id = "desktopTable">
+			<thead>
+			  <tr>
+				<th scope="col">City</th>
+				<th scope="col">Now</th>
+				<th scope="col">Tomorrow</th>
+				<th scope="col" id ="date1">x</th>
+				<th scope="col" id = "date2">x</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr id = "Vilnius">
+				<td>Vilnius</td>
+				<td>Server error</td>
+				<td>Server error</td>
+				<td>Server error</td>
+				<td>Server error</td>
+			  </tr>
+			  <tr id = "Kaunas">
+				<td>Kaunas</td>
+				<td>Server error</td>
+				<td>Server error</td>
+				<td>Server error</td>
+				<td>Server error</td>
+			  </tr>
+			  <tr id = "Klaipeda">
+				<td>Klaipėda</td>
+				<td>Server error</td>
+				<td>Server error</td>
+				<td>Server error</td>
+				<td>Server error</td>
+			  </tr>
+			  <tr id = "Siauliai">
+				<td>Šiauliai</td>
+				<td>Server error</td>
+				<td>Server error</td>
+				<td>Server error</td>
+				<td>Server error</td>
+			  </tr>
+			  <tr id = "Panevezys">
+				<td>Panevėžys</td>
+				<td>Server error</td>
+				<td>Server error</td>
+				<td>Server error</td>
+				<td>Server error</td>
+			  </tr>
+			  <tr id = "Alytus">
+				<td>Alytus</td>
+				<td>Server error</td>
+				<td>Server error</td>
+				<td>Server error</td>
+				<td>Server error</td>
+			  </tr>
+			  <tr id = "Marijampole">
+				<td>Marijampolė</td>
+				<td>Server error</td>
+				<td>Server error</td>
+				<td>Server error</td>
+				<td>Server error</td>
+			  </tr>
+			  <tr id = "Mazeikiai">
+				<td>Mažeikiai</td>
+				<td>Server error</td>
+				<td>Server error</td>
+				<td>Server error</td>
+				<td>Server error</td>
+			  </tr>
+			  <tr id = "Jonava">
+				<td>Jonava</td>
+				<td>Server error</td>
+				<td>Server error</td>
+				<td>Server error</td>
+				<td>Server error</td>
+			  </tr>
+			  <tr id = "Utena">
+				<td>Utena</td>
+				<td>Server error</td>
+				<td>Server error</td>
+				<td>Server error</td>
+				<td>Server error</td>
+			  </tr>
+			</tbody>
+		  </table>
+		</div>
+		<!-- Major Cities -->
+	  </main>
+	<!-- MAIN -->
+	<!-- FOOTER -->
+	<div class="container">
+		<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+		  <p class="col-md-4 mb-0 text-muted">&copy; WeatherCast Lithuania</p>
+	  
+		  <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+			<svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+		  </a>
+	  
+		  <ul class="nav col-md-4 justify-content-end">
+			<li class="nav-item"><a href="#" class="nav-link px-2">Weather</a></li>
+			<li class="nav-item"><a href="https://github.com/DreamUpstream" class="nav-link px-2">Github</a></li>
+		  </ul>
+		</footer>
+	  </div>
+	<!-- FOOTER -->
+
+	<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+docker-compose.yml
+node_modules
+
+/public/hot
+/public/storage
+/public/js
+/public/css
+/public/fonts
+/public/plugins
+/public/images
+
+/public/mix-manifest.json
+/public/mix.js.map

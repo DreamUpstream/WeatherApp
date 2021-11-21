@@ -1,0 +1,78 @@
+@import '~bootstrap/scss/bootstrap';
+
+.logo {
+    background-image: url(../images/Logo.png);
+}
+
+.flag {
+    width: 50px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.headerBackground {
+
+    background-color: rgb(16, 82, 148);
+    background-image: url("../images/Raindrops-Transparent.png");
+    
+}
+.textShadow {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.weatherRenderer {
+    height:700px; width:100%; clear:both; 
+    background-size: cover;
+}
+.badWeather {
+    background-image: url("../images/BadClouds.png");
+}
+.goodWeather {
+    background-image: url("../images/forecastBackground.png");
+}
+
+.special-card {
+    background-color: rgba(4, 43, 170, 0.589); 
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#cardFont {
+    font-size: 1.5em;
+}
+.cardRadius {
+    border-radius: 40px;
+}
+
+
+
+
+@media only screen and (max-width: 768px) { 
+    .weatherRenderer {
+        height:1000px;
+    }
+    
+}
+@media only screen and (min-width: 1000px) { 
+    .mgleft {
+        margin-left: 100px;
+    }
+    .mgright {
+        margin-right: 100px;
+    }
+}
+@media only screen and (min-width: 600px) {
+    #desktopTable {
+        font-size: 1.3em;
+    }
+}
+
+@media only screen and (max-width: 500px) { 
+    #WeatherCity {
+        font-size: 22px;
+    }
+    .flag {
+        width: 35px;
+        height: 25px;
+    }
+}
