@@ -6,5 +6,6 @@ Features:
 - Rendering forecasts (Bootstrap)
 # Installation:
 - npm i
+- npm run assets:prod
 - npm run server:prod
-- open localhost:3000
+- open link provided in the console (default - localhost:3000)
