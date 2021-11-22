@@ -8,5 +8,5 @@ A Weather forecast website for Lithuanian regions built on Nodejs + Expressjs. U
 # Installation:
 - npm install
 - npm run assets:prod
-- npm run server:prod
+- npm run server:start
 - open link provided in the console (default - localhost:3000)
