@@ -15,7 +15,7 @@ export function daysInfo(cityCode) {
             for (let timeStamp of info.forecastTimestamps) {
                 if(Object.keys(returner).length < 4) {
                     if (timeStamp.forecastTimeUtc == now || timeStamp.forecastTimeUtc.split(" ")[1] == "12:00:00" && timeStamp.forecastTimeUtc.split(" ")[0] != day) {
-                        returner[Object.keys(returner).length+"-"+Math.round(timeStamp.airTemperature)] = timeStamp.conditionCode+"|"+timeStamp.windSpeed;
+                        returner[Object.keys(returner).length+"|"+Math.round(timeStamp.airTemperature)] = timeStamp.conditionCode+"|"+timeStamp.windSpeed;
                     }
                 }
                 else {
