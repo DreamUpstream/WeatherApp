@@ -30,7 +30,7 @@
     "http-errors": "^1.8.0",
     "lodash.debounce": "^4.0.8",
     "morgan": "^1.10.0",
-    "request": "git+https://github.com/DreamUpstream/request.git"
+    "request": "git+https://github.com/nonamez/request.git"
   },
   "devDependencies": {
     "laravel-mix": "^6.0.6",
