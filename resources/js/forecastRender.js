@@ -19,7 +19,7 @@ export function renderer(cityName, cityCode) {
                 let element2 = document.getElementById("day" + (+(d.split("|")[0])+1)).querySelectorAll("p")[1];
                 let element3 = document.getElementById("day" + (+(d.split("|")[0])+1)).querySelectorAll("p")[2];
                 //-----element 1------
-                console.log(d.split("|")[1]);
+                
                 if (+(d.split("|")[1]) > 0)
                 {
                     element1.innerText = " +" + d.split("|")[1] + " °C";

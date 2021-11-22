@@ -28,7 +28,10 @@ module.exports.getTown = function(Coordinates) {
 	return new Promise(function(resolve) {
 		request.get(gettext).then(response => {
 			let locationInfos = JSON.parse(response.body);
+			if (locationInfos.address.town)
 			resolve(locationInfos.address.town);
+			else
+			resolve(locationInfos.address.city);
 		});
 	});
 }

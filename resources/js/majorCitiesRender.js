@@ -13,7 +13,11 @@ function renderMajorCities(cities) {
             let counter = 1;
             for (let d in info)
             {
-                document.getElementById(c).querySelectorAll("td")[counter].innerText = d.split("|")[1] + " °C  ";
+                console.log(d.split("|")[1]);
+                if (+(d.split("|")[1]) >= 0)
+                document.getElementById(c).querySelectorAll("td")[counter].innerText = "" + d.split("|")[1] + " °C⠀";
+                else
+                document.getElementById(c).querySelectorAll("td")[counter].innerText = "  " + d.split("|")[1] + " °C   ";
                 let weatherIcon = document.createElement("i");
                 let classes = favGen.conditionFavicon(info[d].split("|")[0]).split(" ");
                 for (let c of classes) {
