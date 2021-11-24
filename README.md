@@ -7,7 +7,7 @@ A Weather forecast website for Lithuanian regions built on Nodejs + Expressjs. \
 - Rendering forecasts (Bootstrap)
 - Server built using Node.js, Express.js, Webpack, Laravel-mix
 # Installation:
-- install npm+node.js
+- install npm+node.js\
 In directory:
 - npm install
 - npm run assets:prod
